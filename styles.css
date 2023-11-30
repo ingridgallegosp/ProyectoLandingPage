@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400&display=swap');
+
+:root{
+    --white: #FFF;
+    --gray: #7e7e7e;
+    --gray-dark: #26282B;
+    --black: #000;
+    --yellow:#DF991B;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+hr {
+    background-color: var(--white);
+  }
+h1{
+    color: var(--white);
+    font-family: PF Regal Display Pro;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px
+}
+
+h2{
+    color: var(--black);
+/*     text-align: center;
+ */    font-family: PF Regal Display Pro;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+h3{
+    color: var(--yellow);
+/*     text-align: center;
+ */    font-family: PF Regal Display Pro;
+ font-size: 30px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 45px;
+}
+.rounded-button{
+    border-radius: 100px;
+    border: 1px solid var(--white);
+    background-color: transparent;
+}
+
+.rounded-button:hover{
+    border-radius: 100px;
+    border: 1px solid var(--white);
+    background-color: transparent;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+body main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    background-image: url(./assets/mikail-cut.png);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    /* opacity: 0.3; */
+   /*  background-color: linear-gradient(90deg, #000 0%, #7E7E7E 100%);
+    mix-blend-mode: overlay;   */
+    /*  filter: grayscale(40%); */
+}
+/* body main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(270deg, #000 0%, #7E7E7E 100%);
+    mix-blend-mode: multiply;
+} */
+
+/*header*/
+body main header {
+    padding: 2% 0;
+}
+
+body main header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+body main header nav .logo{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body main header nav .logo img{
+    width: 60%;
+}
+
+body main header nav .options{
+    width: 75%;
+    display: flex;   
+    justify-content: flex-end;
+}
+
+body main header nav .options .register,
+body main header nav .options .idioms{
+    width: 20%; 
+    display: flex;  
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+
+body main header nav .options .register a,
+body main header nav .options .idioms a{
+    color: var(--white);
+    padding: 0 5%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 390;
+    line-height: 45px
+}
+
+body main header nav .options .register a:hover,
+body main header nav .options .idioms a:hover{
+    color: var(--black);
+}
+
+body main header nav .options .register .line{
+    border-left: solid 1px var(--white); 
+    height: 20px;  
+    margin: 0 8%; 
+}
+
+body main header nav .options .idioms img{
+    width: 16%;
+    margin: 0 5%;
+}
+
+body main header nav .line{
+    border-left: solid 1px var(--white);    
+}
+
+body main header nav .toggle{
+    padding: 0 3%;
+    display: flex;
+}
+
+/*banner*/
+body main .banner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 8% 10%;
+}
+
+body main .banner .search{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+body main .banner .search input{
+    width: 35%;
+    padding: 1.5%;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+}
+
+body main .banner .search input::placeholder{
+    color: var(--white);
+    background-image: url(./assets/search.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size:contain;
+}
+
+body main .banner .search img{
+    position: absolute;
+    width: 20px;
+    top: 22px;
+    right: 120px;
+}
+
+body main .banner .title h1{
+    padding: 1% 0 5%;
+}
+body main .banner .title h3{
+    color: var(--gray) !important;
+}
+
+body main .banner .title .rounded-button{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--white);
+}
+
+body main .banner .title .rounded-button:hover{
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+}
+
+body main .banner .title .rounded-button img{
+    padding: 2%;
+}
+
+body main .banner .title .rounded-button p{
+    padding: 3%;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 390;
+    line-height: 45px;
+}
+
+/**/
+body .sale{
+    display: flex;
+}
+
+body .sale .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body .sale .description .description-context{
+
+}
+body .sale .description div{
+    display: flex;
+    justify-content: center;
+}
+/**/
+body .rent{
+    display: flex;
+}
+
+/**/
+body .development{
+    display: flex;
+}
+
+/**/
+body .blog{
+    display: flex;
+}
+
+/**/
+footer{
+
+}
+footer .newsletter{
+    background-color: var(--gray-dark);
+    margin: 0 5%;
+    display: flex;
+    
+}
+footer .newsletter .title{
+    width: 40%;
+    display: flex;
+    padding: 5%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+footer .newsletter .form{
+    width: 60%;
+    padding: 5%;
+    display: flex;
+    background-color: var(--black);
+    flex-direction: column;
+
+}
+footer .contact{
+    background-color: var(--black);
+    position: sticky;
+    top: 250px;
+}
+

@@ -21,7 +21,7 @@ hr {
 h1{
     color: var(--white);
     font-family: PF Regal Display Pro;
-    font-size: 80px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 500;
     line-height: 45px;
@@ -31,7 +31,7 @@ h2{
     color: var(--black);
 /*     text-align: center;
  */    font-family: PF Regal Display Pro;
-    font-size: 80px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 500;
     line-height: 45px;
@@ -48,15 +48,25 @@ h3{
 }
 .rounded-button{
     border-radius: 100px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--black);
     background-color: transparent;
 }
 
 .rounded-button:hover{
     border-radius: 100px;
-    border: 1px solid var(--white);
-    background-color: transparent;
+    border: 1px solid var(--black);
+    background-color: var(--black);
+    color: var(--white);
 }
+.card{
+    width: auto;
+    height: 340px;
+    margin: 0 3%;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
 
 body{
     width: 100vw;
@@ -118,7 +128,7 @@ body main header nav .options{
 
 body main header nav .options .register,
 body main header nav .options .idioms{
-    width: 20%; 
+    width: 22%; 
     display: flex;  
     justify-content: flex-end;
     align-items: center;
@@ -212,6 +222,7 @@ body main .banner .title .rounded-button{
     align-items: center;
     justify-content: space-evenly;
     color: var(--white);
+    border-color: var(--white) !important;
 }
 
 body main .banner .title .rounded-button:hover{
@@ -234,34 +245,310 @@ body main .banner .title .rounded-button p{
 /**/
 body .sale{
     display: flex;
+    width: 100%;
+    padding: 5% 0;
+}
+body .sale .cards{
+    width: 50%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
 }
 
+body .sale .cards .card{
+    display: flex;
+    align-items: flex-end;
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .sale .cards .card .card1{
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .sale .cards .card .card2{
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .sale .cards .card .card3{
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .sale .cards .card .card-info{
+    width: 100%; 
+    height: 25%;
+    display: flex;
+    padding: 5%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+}
+
+body .sale .cards .card .card-info:hover{
+    background-color: var(--white);
+    transition: 1s;
+}
+
+body .sale .cards .card .card-info .country{
+    color: var(--gray-dark);
+    font-family: PF Regal Display Pro;
+    font-size: 20px;
+
+}
+body .sale .cards .card .card-info:hover > .country::before {
+    content: url(./assets/castle.svg);
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+body .sale .cards .card .card-info .city{
+    color: var(--black);
+    font-family: PF Regal Display Pro;
+    font-size: 30px;
+}
+
+
 body .sale .description{
+    width: 50%;
+    padding: 0 5% 0 8%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 body .sale .description .description-context{
-
-}
-body .sale .description div{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+body .sale .description .description-arrows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+body .sale .description .description-arrows:hover{
+    color: var(--yellow);
+}
+
+body .sale .description .description-arrows .arrows{    
+    border: none;
+    background: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+body .sale .description .description-arrows .arrows img{
+    padding: 0 15%;
+    width: 55%;
+}
+
+body .sale .description .description-arrows .arrows p{
+    font-size: 15px;
+    font-weight: 300;
+}
+body .sale .description .description-arrows .arrows p:hover{
+    color: var(--yellow);
+}
+
+body .sale .description .description-arrows  .rounded-button{
+    padding: 3% 7%;
+    font-size: 20px;
 }
 /**/
 body .rent{
     display: flex;
+    width: 100%;
+    padding: 5% 0;
+}
+body .rent .cards{
+    width: 50%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns:  1fr 1fr 0.5fr;
+}
+
+body .rent .cards .card{
+    display: flex;
+    align-items: flex-end;
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .rent .cards .card .card1{
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .rent .cards .card .card2{
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .rent .cards .card .card3{
+    background-image: url(./assets/daniel-barnes.png);
+}
+
+body .rent .cards .card .card-info{
+    width: 100%; 
+    height: 25%;
+    display: flex;
+    padding: 5%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+}
+
+body .rent .cards .card .card-info:hover{
+    background-color: var(--white);
+    transition: 1s;
+}
+
+body .rent .cards .card .card-info .country{
+    color: var(--gray-dark);
+    font-family: PF Regal Display Pro;
+    font-size: 20px;
+
+}
+
+body .rent .cards .card .card-info .city{
+    color: var(--black);
+    font-family: PF Regal Display Pro;
+    font-size: 30px;
+}
+
+
+body .rent .description{
+    width: 50%;
+    padding: 0 5% 0 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body .rent .description .description-context{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+body .rent .description .description-arrows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+body .rent .description .description-arrows:hover{
+    color: var(--yellow);
+}
+
+body .rent .description .description-arrows .arrows{    
+    border: none;
+    background: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+body .rent .description .description-arrows .arrows img{
+    padding: 0 15%;
+    width: 55%;
+}
+
+body .rent .description .description-arrows .arrows p{
+    font-size: 15px;
+    font-weight: 300;
+}
+body .rent .description .description-arrows .arrows p:hover{
+    color: var(--yellow);
+}
+
+body .rent .description .description-arrows  .rounded-button{
+    padding: 3% 7%;
+    font-size: 20px;
 }
 
 /**/
 body .development{
     display: flex;
+    justify-content: center;
 }
+
+body .development .title{
+    padding: 5% ;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+body .development .gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    
+}
+
 
 /**/
 body .blog{
     display: flex;
 }
+body .blog figure{
+    width: 60%;
+}
+
+body .blog .description{
+    width: 40%;
+    padding: 0 5% 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body .blog .description .description-context{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+} 
+body .blog .description .description-arrows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+body .blog .description .description-arrows:hover{
+    color: var(--yellow);
+}
+
+body .blog .description .description-arrows .arrows{    
+    border: none;
+    background: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+body .blog .description .description-arrows .arrows img{
+    padding: 0 15%;
+    width: 55%;
+}
+
+body .blog .description .description-arrows .arrows p{
+    font-size: 15px;
+    font-weight: 300;
+}
+body .blog .description .description-arrows .arrows p:hover{
+    color: var(--yellow);
+}
+
+body .blog .description .description-arrows  .rounded-button{
+    padding: 3% 7%;
+    font-size: 20px;
+} 
+    
 
 /**/
 footer{
