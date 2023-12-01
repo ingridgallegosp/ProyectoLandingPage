@@ -15,13 +15,15 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 hr {
     background-color: var(--white);
-  }
+}
+
 h1{
     color: var(--white);
-    font-family: PF Regal Display Pro;
-    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
     font-style: normal;
     font-weight: 500;
     line-height: 45px;
@@ -29,9 +31,8 @@ h1{
 
 h2{
     color: var(--black);
-/*     text-align: center;
- */    font-family: PF Regal Display Pro;
-    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
     font-style: normal;
     font-weight: 500;
     line-height: 45px;
@@ -39,13 +40,13 @@ h2{
 
 h3{
     color: var(--yellow);
-/*     text-align: center;
- */    font-family: PF Regal Display Pro;
-    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: 45px;
 }
+
 .rounded-button{
     border-radius: 100px;
     border: 1px solid var(--black);
@@ -59,14 +60,16 @@ h3{
     color: var(--white);
 }
 .card{
-    width: auto;
+    /* width: auto;
     height: 340px;
-    margin: 0 3%;
+    margin: 0 3%; */
+    height: 260px;
+    margin: 0 5%;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
+    overflow: hidden;
 }
-
 
 body{
     width: 100vw;
@@ -101,76 +104,90 @@ body main{
 
 /*header*/
 body main header {
-    padding: 2% 0;
+    width: 100%;
+    padding: 6% 0 3%;
 }
 
 body main header nav{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 body main header nav .logo{
-    width: 25%;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-body main header nav .logo img{
-    width: 60%;
+body main header nav .logo .logo1{
+    width: 55%;
+}
+
+body main header nav .logo .logo2{
+    display: none;
 }
 
 body main header nav .options{
-    width: 75%;
+    width: 80%;
     display: flex;   
     justify-content: flex-end;
 }
 
 body main header nav .options .register,
 body main header nav .options .idioms{
-    width: 22%; 
+    display: none;
+    /* width: 22%; 
     display: flex;  
     justify-content: flex-end;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 body main header nav .options .register a,
 body main header nav .options .idioms a{
-    color: var(--white);
+    /* color: var(--white);
     padding: 0 5%;
     cursor: pointer;
     text-align: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 390;
-    line-height: 45px
+    line-height: 45px */
 }
 
 body main header nav .options .register a:hover,
 body main header nav .options .idioms a:hover{
-    color: var(--black);
+    /* color: var(--black); */
 }
 
 body main header nav .options .register .line{
-    border-left: solid 1px var(--white); 
+    /* border-left: solid 1px var(--white); 
     height: 20px;  
-    margin: 0 8%; 
+    margin: 0 8%;  */
 }
 
 body main header nav .options .idioms img{
-    width: 16%;
-    margin: 0 5%;
+    /* width: 16%;
+    margin: 0 5%; */
 }
 
 body main header nav .line{
-    border-left: solid 1px var(--white);    
+    /* border-left: solid 1px var(--white);  */   
 }
 
 body main header nav .toggle{
-    padding: 0 3%;
+    width: 25%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+body main header nav .toggle img{
+    width: 50%;
+}
+
+
 
 /*banner*/
 body main .banner{
@@ -178,20 +195,23 @@ body main .banner{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2% 8% 10%;
+    padding: 2% 5% 5%;
 }
 
 body main .banner .search{
+    padding: 5% 0;
     display: flex;
     justify-content: flex-end;
     position: relative;
 }
+
 body main .banner .search input{
-    width: 35%;
-    padding: 1.5%;
+    width: 100%;
+    padding: 5%;
     border-radius: 100px;
     border: 1px solid #FFF;
     background-color: transparent;
+    outline: none;
 }
 
 body main .banner .search input::placeholder{
@@ -210,17 +230,17 @@ body main .banner .search img{
 }
 
 body main .banner .title h1{
-    padding: 1% 0 5%;
+    padding: 0 0 8%;
 }
 body main .banner .title h3{
     color: var(--gray) !important;
 }
 
 body main .banner .title .rounded-button{
-    width: 35%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     color: var(--white);
     border-color: var(--white) !important;
 }
@@ -231,12 +251,11 @@ body main .banner .title .rounded-button:hover{
 }
 
 body main .banner .title .rounded-button img{
-    padding: 2%;
+    padding-right: 4%;
 }
 
 body main .banner .title .rounded-button p{
-    padding: 3%;
-    font-size: 28px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 390;
     line-height: 45px;
@@ -244,34 +263,38 @@ body main .banner .title .rounded-button p{
 
 /**/
 body .sale{
-    display: flex;
     width: 100%;
-    padding: 5% 0;
+/*     height: 100%;
+ */    padding: 5% 0;
+    display: flex;
+    flex-direction: column-reverse;
+    
 }
 body .sale .cards{
-    width: 50%;
+/*     width: 50%;
+ */    
     overflow: hidden;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-columns:  1fr 0.5fr;
+
 }
 
 body .sale .cards .card{
     display: flex;
     align-items: flex-end;
+}
+
+body .sale .cards .card.card1{
     background-image: url(./assets/daniel-barnes.png);
 }
 
-body .sale .cards .card .card1{
-    background-image: url(./assets/daniel-barnes.png);
+body .sale .cards .card.card2{
+    background-image: url(./assets/derek-thomson.png);
 }
 
-body .sale .cards .card .card2{
-    background-image: url(./assets/daniel-barnes.png);
-}
-
-body .sale .cards .card .card3{
-    background-image: url(./assets/daniel-barnes.png);
-}
+body .sale .cards .card.card3{
+    background-image: url(./assets/scott-lorsch.png);
+} 
 
 body .sale .cards .card .card-info{
     width: 100%; 
@@ -291,7 +314,7 @@ body .sale .cards .card .card-info:hover{
 
 body .sale .cards .card .card-info .country{
     color: var(--gray-dark);
-    font-family: PF Regal Display Pro;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 
 }
@@ -303,43 +326,57 @@ body .sale .cards .card .card-info:hover > .country::before {
 
 body .sale .cards .card .card-info .city{
     color: var(--black);
-    font-family: PF Regal Display Pro;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
 }
 
 
 body .sale .description{
-    width: 50%;
-    padding: 0 5% 0 8%;
+/*     padding: 0 5% 0 8%;
+ */ 
+    padding: 5% 8%; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 body .sale .description .description-context{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
 }
+
+body .sale .description .description-paragraph{
+    padding: 10% 0;
+}
+
+body .sale .description .description-paragraph p{
+    font-weight: 300;
+    line-height: 30px;
+}
+
 body .sale .description .description-arrows{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
+
 body .sale .description .description-arrows:hover{
     color: var(--yellow);
 }
 
 body .sale .description .description-arrows .arrows{    
-    border: none;
+    display: none;
+    visibility: hidden;
+    /* border: none;
     background: none;
     display: flex;
     cursor: pointer;
-    align-items: center;
+    align-items: center; */
 }
-
+/* 
 body .sale .description .description-arrows .arrows img{
     padding: 0 15%;
     width: 55%;
@@ -351,14 +388,159 @@ body .sale .description .description-arrows .arrows p{
 }
 body .sale .description .description-arrows .arrows p:hover{
     color: var(--yellow);
-}
+} */
 
 body .sale .description .description-arrows  .rounded-button{
-    padding: 3% 7%;
-    font-size: 20px;
+/*     padding: 3% 7%;
+ */     
+    width: 100%;
+    margin: 5% 0;
+    border: none;
+    font-size: 15px;
+    color: var(--yellow);
 }
+
+body .sale .description .description-arrows  .rounded-button:hover{
+    background: none;
+}
+
+body .sale .description .description-arrows  .rounded-button img{
+    width: 8%;
+}
+
 /**/
 body .rent{
+    width: 100%;    
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+body .rent .cards{
+/*     width: 50%;
+ */    
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+body .rent .cards .card{
+    display: flex;
+    align-items: flex-end;
+}
+
+body .rent .cards .card.card1{
+    background-image: url(./assets/lindsay.png);
+}
+
+body .rent .cards .card.card2{
+    background-image: url(./assets/Maskgroup1.jpg);
+}
+
+body .rent .cards .card.card3{
+    background-image: url(./assets/luxury-home.png);
+}
+
+body .rent .cards .card .card-info{
+    width: 100%; 
+    height: 25%;
+    display: flex;
+    padding: 5%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+}
+
+body .rent .cards .card .card-info:hover{
+    background-color: var(--white);
+    transition: 1s;
+}
+
+body .rent .cards .card .card-info .country{
+    color: var(--gray-dark);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+}
+body .rent .cards .card .card-info:hover > .country::before {
+    content: url(./assets/castle.svg);
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+body .rent .cards .card .card-info .city{
+    color: var(--black);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+
+body .rent .description{
+/*     padding: 0 5% 0 8%;
+ */ 
+    padding: 5% 8%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body .rent .description .description-context{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+body .rent .description .description-paragraph{
+    padding: 10% 0;
+}
+
+body .rent .description .description-paragraph p{
+    font-weight: 300;
+    line-height: 30px;
+}
+
+body .rent .description .description-arrows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+body .rent .description .description-arrows:hover{
+    color: var(--yellow);
+}
+
+body .rent .description .description-arrows .arrows{    
+    display: none;
+    visibility: hidden;
+   
+}
+
+
+body .rent .description .description-arrows  .rounded-button{
+/*     padding: 3% 7%;
+ */     
+    width: 100%;
+    margin: 5% 0;
+    border: none;
+    font-size: 15px;
+    color: var(--yellow);
+}
+
+body .rent .description .description-arrows  .rounded-button:hover{
+    background: none;
+}
+
+body .rent .description .description-arrows  .rounded-button img{
+    width: 8%;
+}
+
+
+/**/
+/* body .rent{
     display: flex;
     width: 100%;
     padding: 5% 0;
@@ -466,12 +648,13 @@ body .rent .description .description-arrows .arrows p:hover{
 body .rent .description .description-arrows  .rounded-button{
     padding: 3% 7%;
     font-size: 20px;
-}
+} */
 
 /**/
 body .development{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 body .development .title{
@@ -484,53 +667,132 @@ body .development .title{
 
 body .development .gallery{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    
+    grid-template-columns:  1fr;
+    grid-template-rows: repeat(3, auto);
+    overflow: hidden;
+    gap: 5px;
+}
+.card:nth-child(n+4) {
+    display: none !important; /* Oculta tarjetas a partir de la tercera */
 }
 
+body .development .gallery .card{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+body .development .gallery .card .card-info{
+    color: var(--white);
+}
+body .development .gallery .card .card-info:hover{
+    width: 100%;
+    background-color: var(--white);
+}
+
+body .development .gallery .card.card-1{
+    background-image: url(./assets/dev1.png);
+}
+
+body .development .gallery .card.card-2{
+    background-image: url(./assets/dev2.png);
+}
+
+body .development .gallery .card.card-3{
+    background-image: url(./assets/dev3.png);
+}
+
+body .development .gallery .card.card-4{
+    background-image: url(./assets/dev4.png);
+}
+
+body .development .gallery .card.card-4{
+    background-image: url(./assets/dev4.png);
+}
+
+body .development .gallery .card.card-5{
+    background-image: url(./assets/dev5.png);
+}
+
+body .development .gallery .card.card-6{
+    background-image: url(./assets/dev6.png);
+}
+
+body .development .gallery .card.card-7{
+    background-image: url(./assets/dev7.png);
+}
+
+body .development .gallery .card.card-8{
+    background-image: url(./assets/dev8.png);
+}
 
 /**/
 body .blog{
     display: flex;
+    flex-direction: column-reverse;
 }
+
 body .blog figure{
-    width: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+body .blog figure .imgfondo{
+    width: 75%;
+    top: 0;
+    z-index: -1;
+}
+
+body .blog figure .imgfrente{
+    position: absolute;
+    width: 95%;
+    right: 0;
 }
 
 body .blog .description{
-    width: 40%;
-    padding: 0 5% 0 3%;
+    padding: 5% 8%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 body .blog .description .description-context{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-} 
+}
+
+body .blog .description .description-paragraph{
+    padding: 10% 0;
+}
+
+body .blog .description .description-paragraph p{
+    font-weight: 300;
+    line-height: 30px;
+}
+
 body .blog .description .description-arrows{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
+
 body .blog .description .description-arrows:hover{
     color: var(--yellow);
 }
 
 body .blog .description .description-arrows .arrows{    
-    border: none;
+    display: none;
+    visibility: hidden;
+    /* border: none;
     background: none;
     display: flex;
     cursor: pointer;
-    align-items: center;
+    align-items: center; */
 }
-
+/* 
 body .blog .description .description-arrows .arrows img{
     padding: 0 15%;
     width: 55%;
@@ -542,43 +804,125 @@ body .blog .description .description-arrows .arrows p{
 }
 body .blog .description .description-arrows .arrows p:hover{
     color: var(--yellow);
+} */
+
+body .blog .description .description-arrows  .rounded-button{     
+    width: 100%;
+    margin: 5% 0;
+    border: none;
+    font-size: 15px;
+    color: var(--yellow);
 }
 
-body .blog .description .description-arrows  .rounded-button{
-    padding: 3% 7%;
-    font-size: 20px;
-} 
-    
+body .blog .description .description-arrows  .rounded-button:hover{
+    background: none;
+}
+
+body .blog .description .description-arrows  .rounded-button img{
+    width: 8%;
+}
+
+ 
 
 /**/
 footer{
+    display: flex;
+    flex-direction: column;
 
 }
+
 footer .newsletter{
+    margin-top: 90% ;
+    display: flex;
+    flex-direction: column; 
+}
+
+footer .newsletter  .back{
+    width: 100%;
+    position: relative;
+    height: 150px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+}
+
+footer .newsletter .back .front{
+    position: absolute;
+    top: -250px;
     background-color: var(--gray-dark);
-    margin: 0 5%;
-    display: flex;
-    
 }
-footer .newsletter .title{
-    width: 40%;
-    display: flex;
-    padding: 5%;
-    background-color: var(--black);
-    display: flex;
-    flex-direction: column;
-}
-footer .newsletter .form{
-    width: 60%;
-    padding: 5%;
-    display: flex;
-    background-color: var(--black);
-    flex-direction: column;
 
+footer .newsletter .back .front .title{
+    padding: 5%;
 }
+
+footer .newsletter .back .front .title h2{
+    width: 80%;
+}
+
+footer .newsletter .back .front .form{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+footer .newsletter .back .front .form label{
+    color: var(--white);
+    font-weight: 300;
+    padding-bottom: 5%;
+}
+
+footer .newsletter .back .front .form input{
+    width: 90%;
+    padding: 5%;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    outline: none;
+}
+
+footer .newsletter .back .front .form .rounded-button{     
+    width: 100%;
+    margin: 5% 0;
+    border: none;
+    font-size: 15px;
+    color: var(--yellow);
+}
+
 footer .contact{
+    height: auto;
+    padding: 0 5%;
     background-color: var(--black);
-    position: sticky;
-    top: 250px;
+    color: var(--white);
+    font-weight: 300;
 }
 
+footer .contact .info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "begin begin"
+    "body1 body2"
+    "final final" ;
+    gap: 5%;
+}
+footer .contact .info .column1{
+    grid-area: begin;
+}
+footer .contact .info .column2{
+    grid-area: body1;
+}
+footer .contact .info .column3{
+    grid-area: body2;
+}
+footer .contact .info .column4{
+    grid-area: final;
+}
+footer .contact .social-media{
+padding: 8%;
+}
+
+footer .contact .copywright{
+    padding: 2%;
+}
