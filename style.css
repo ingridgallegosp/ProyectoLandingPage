@@ -276,7 +276,10 @@ body .sale .cards{
     overflow: hidden;
     display: grid;
     grid-template-columns:  1fr 0.5fr;
+}
 
+body .sale .cards .card:nth-child(n+3) {
+    display: none !important; 
 }
 
 body .sale .cards .card{
@@ -430,6 +433,10 @@ body .rent .cards .card{
     align-items: flex-end;
 }
 
+body .rent .cards .card:nth-child(n+3) {
+    display: none !important; 
+}
+
 body .rent .cards .card.card1{
     background-image: url(./assets/lindsay.png);
 }
@@ -463,11 +470,6 @@ body .rent .cards .card .card-info .country{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 
-}
-body .rent .cards .card .card-info:hover > .country::before {
-    content: url(./assets/castle.svg);
-    display: inline-block;
-    transform: scale(0.6);
 }
 
 body .rent .cards .card .card-info .city{
@@ -673,7 +675,7 @@ body .development .gallery{
     gap: 5px;
 }
 .card:nth-child(n+4) {
-    display: none !important; /* Oculta tarjetas a partir de la tercera */
+    display: none !important; /* Oculta tarjetas a partir de la 4ta */
 }
 
 body .development .gallery .card{
@@ -681,6 +683,8 @@ body .development .gallery .card{
     display: flex;
     align-items: flex-end;
 }
+
+
 body .development .gallery .card .card-info{
     color: var(--white);
 }
@@ -858,6 +862,8 @@ footer .newsletter .back .front .title{
 
 footer .newsletter .back .front .title h2{
     width: 80%;
+    color: var(--white);
+    line-height: none;
 }
 
 footer .newsletter .back .front .form{
@@ -900,7 +906,7 @@ footer .contact{
 footer .contact .info{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, 60px);
     grid-template-areas:
     "begin begin"
     "body1 body2"
@@ -920,9 +926,24 @@ footer .contact .info .column4{
     grid-area: final;
 }
 footer .contact .social-media{
-padding: 8%;
+padding: 8% 0 5% 0;
 }
-
+footer .contact .social-media{
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    /* display: flex;
+    flex-direction: column; */
+}
+footer .contact .social-media p{
+    display: none;
+}
+footer .contact .social-media a{
+    margin: 2%;
+}
 footer .contact .copywright{
-    padding: 2%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
 }
