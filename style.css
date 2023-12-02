@@ -14,6 +14,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+/*     overflow-x: hidden;
+ */    
 }
 
 hr {
@@ -71,6 +73,8 @@ h3{
     overflow: hidden;
 }
 
+
+
 body{
     width: 100vw;
     height: 100vh;
@@ -111,7 +115,7 @@ body main header {
 body main header nav{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 body main header nav .logo{
@@ -138,43 +142,6 @@ body main header nav .options{
 body main header nav .options .register,
 body main header nav .options .idioms{
     display: none;
-    /* width: 22%; 
-    display: flex;  
-    justify-content: flex-end;
-    align-items: center;
-    justify-content: center; */
-}
-
-body main header nav .options .register a,
-body main header nav .options .idioms a{
-    /* color: var(--white);
-    padding: 0 5%;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 390;
-    line-height: 45px */
-}
-
-body main header nav .options .register a:hover,
-body main header nav .options .idioms a:hover{
-    /* color: var(--black); */
-}
-
-body main header nav .options .register .line{
-    /* border-left: solid 1px var(--white); 
-    height: 20px;  
-    margin: 0 8%;  */
-}
-
-body main header nav .options .idioms img{
-    /* width: 16%;
-    margin: 0 5%; */
-}
-
-body main header nav .line{
-    /* border-left: solid 1px var(--white);  */   
 }
 
 body main header nav .toggle{
@@ -265,7 +232,8 @@ body main .banner .title .rounded-button p{
 body .sale{
     width: 100%;
 /*     height: 100%;
- */    padding: 5% 0;
+ */    
+    padding: 5% 0;
     display: flex;
     flex-direction: column-reverse;
     
@@ -273,6 +241,7 @@ body .sale{
 body .sale .cards{
 /*     width: 50%;
  */    
+    width: 100%;
     overflow: hidden;
     display: grid;
     grid-template-columns:  1fr 0.5fr;
@@ -851,6 +820,7 @@ footer .newsletter  .back{
 }
 
 footer .newsletter .back .front{
+    width: 80%;
     position: absolute;
     top: -250px;
     background-color: var(--gray-dark);
@@ -947,3 +917,149 @@ footer .contact .copywright{
     justify-content: center;
     font-size: 12px;
 }
+
+
+ 
+/* @media (min-width: 480px) and (max-width: 767px) {
+    
+    
+} */
+
+  
+@media (min-width: 768px) and (max-width: 1024px) {
+    body main header{
+        padding: 3% 5% 2% 5%;
+    }  
+   
+    body main header nav .logo{
+        width: 25%;
+    }
+
+    body main header nav .logo .logo1{
+        display: none;
+    }
+
+    body main header nav .logo .logo2{
+        width: 100%;
+        display: flex;
+    }
+
+    body main header nav .options{
+    align-items: center;
+    }
+
+    body main header nav .options .register,
+    body main header nav .options .idioms,
+    body main header nav .options .line{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    body main header nav .options .register,
+    body main header nav .options .idioms{
+        width: 25%;
+        align-items: center;
+    }
+
+    body main header nav .options .register .line{
+        border-left: solid 1px var(--white); 
+        height: 20px;  
+        margin: 0 8%; 
+    }
+    body main header nav .options .register a,
+    body main header nav .options .idioms a{
+        color: var(--white);
+        cursor: pointer;
+/*         text-align: center;
+ */        font-size: 14px;
+        font-style: normal;
+        font-weight: 390;
+        line-height: 45px
+    }
+
+    body main header nav .options .register a:hover,
+    body main header nav .options .idioms a:hover{
+        color: var(--black);
+    }
+
+    body main header nav .line{
+        border-left: solid 1px var(--white);  
+        height: 30px; 
+        margin-right: 5%;
+    }
+
+    body main header nav .options .toggle{
+        width: 5%;
+    }
+
+    body main header nav .options .toggle img{
+        width: 100%;
+    }
+
+    body main .banner .search{
+        padding: 2% 0;
+    }
+
+    body main .banner .search input{
+        width: 45%;
+        padding: 2%;
+    }
+
+    body main .banner .title h1 {
+        padding: 0 0 5%;
+    }
+
+    body main .banner .title .rounded-button {
+        width: 35%;
+    }
+
+    body .sale,
+    body .rent,
+    body .blog{
+        flex-direction: row;
+    }
+
+    body .sale .description,
+    body .sale .cards,
+    body .rent .description,
+    body .rent .cards,
+    body .blog figure,
+    body .blog .description{
+        width: 50%;
+        align-items: center;
+    }
+
+    body .sale .description,
+    body .rent .description,
+    body .blog .description{
+        padding: 5%;
+    }
+
+    footer .newsletter {
+        margin-top: 25%;
+    }
+    
+    footer .newsletter .back .front{
+        display: flex;
+        width: 90%;
+        top: -150px;
+    }
+
+}
+ 
+  
+
+
+
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  
