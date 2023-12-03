@@ -7,7 +7,6 @@
     --black: #000;
     --yellow:#DF991B;
     overflow-x: hidden;
-
 }
 
 *{
@@ -249,9 +248,7 @@ body main .banner .title .rounded-button p{
 
 /**/
 body .sale{
-    width: 100%;
-/*     height: 100%;
- */    
+    width: 100%;    
     padding: 5% 0;
     display: flex;
     flex-direction: column-reverse;
@@ -355,9 +352,7 @@ body .sale .description .description-arrows .arrows{
     display: none;
 }
 
-body .sale .description .description-arrows  .rounded-button{
-/*     padding: 3% 7%;
- */     
+body .sale .description .description-arrows  .rounded-button{   
     width: 100%;
     margin: 5% 0;
     border: none;
@@ -490,100 +485,6 @@ body .rent .description .description-arrows  .rounded-button img{
     width: 8%;
 }
 
-
-/**/
-/* body .rent{
-    display: flex;
-    width: 100%;
-    padding: 5% 0;
-}
-body .rent .cards{
-    width: 50%;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns:  1fr 1fr 0.5fr;
-}
-
-body .rent .cards .card .card-info{
-    width: 100%; 
-    height: 25%;
-    display: flex;
-    padding: 5%;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--white);
-}
-
-body .rent .cards .card .card-info:hover{
-    background-color: var(--white);
-    transition: 1s;
-}
-
-body .rent .cards .card .card-info .country{
-    color: var(--gray-dark);
-    font-family: PF Regal Display Pro;
-    font-size: 20px;
-
-}
-
-body .rent .cards .card .card-info .city{
-    color: var(--black);
-    font-family: PF Regal Display Pro;
-    font-size: 30px;
-}
-
-
-body .rent .description{
-    width: 50%;
-    padding: 0 5% 0 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-body .rent .description .description-context{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-}
-body .rent .description .description-arrows{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-}
-body .rent .description .description-arrows:hover{
-    color: var(--yellow);
-}
-
-body .rent .description .description-arrows .arrows{    
-    border: none;
-    background: none;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-}
-
-body .rent .description .description-arrows .arrows img{
-    padding: 0 15%;
-    width: 55%;
-}
-
-body .rent .description .description-arrows .arrows p{
-    font-size: 15px;
-    font-weight: 300;
-}
-body .rent .description .description-arrows .arrows p:hover{
-    color: var(--yellow);
-}
-
-body .rent .description .description-arrows  .rounded-button{
-    padding: 3% 7%;
-    font-size: 20px;
-} */
-
 /**/
 body .development{
     display: flex;
@@ -594,9 +495,6 @@ body .development{
 body .development .title{
     padding: 5% ;
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 body .development .gallery{
@@ -606,9 +504,6 @@ body .development .gallery{
     overflow: hidden;
     gap: 5px;
 }
-/* .card:nth-child(n+4) {
-    display: none !important; /* Oculta tarjetas a partir de la 4ta 
-} */
 
 body .development .gallery .card{
     width: 100%;
@@ -1084,6 +979,7 @@ footer .contact .copywright{
         grid-template-rows: repeat(3, 1fr);
         gap: 15px;
     }
+
     footer .newsletter {
         margin-top: 25%;
     }
@@ -1094,10 +990,13 @@ footer .contact .copywright{
         top: -150px;
     }
 
+    footer .newsletter .back .front .title{
+        width: 50%;
+    }
+
     footer .newsletter .back .front .title h2 {
         width: 100%;
     }
- 
     
     footer .newsletter .back .front .form{
         width: 50%;
@@ -1125,6 +1024,7 @@ footer .contact .copywright{
         font-weight: 300;
         transition: 1s;
     }
+
     footer .newsletter .back .front .form input:focus{
         color: var(--white);
     }
@@ -1181,7 +1081,66 @@ footer .contact .copywright{
 }
 
 
-    @media (min-width: 1025px) {
-    
-    
+@media (min-width: 1024px){
+
+    body main header {
+        padding: 1% 0% 0.5% 7%;
     }
+
+    body main header nav .logo {
+        width: 20%;
+    }
+
+    body main header nav .options .register, 
+    body main header nav .options .idioms {
+        width: 21%;
+    }
+
+    body main .banner .search input {
+        width: 35%;
+        padding: 1.5%;
+    }
+
+    body main header nav .options .line{
+        margin-right: 0;
+    }
+        
+    body main header nav .options .toggle{
+        width: 9%;
+    }
+        
+    body main header nav .options .toggle img{
+        width: 40%;
+    }
+
+    body main .banner{
+        padding: 0% 7% 8% 7%;
+    }
+
+    body main .banner .title .rounded-button {
+        width: 30%;
+    }
+
+    body .sale, 
+    body .rent, 
+    body .blog {
+        padding: 2% 0%;
+    }
+
+    body .sale .description, 
+    body .blog .description {
+        padding: 2% 7% 2% 5%;
+    }
+
+    body .rent .description {
+        padding: 2% 5% 2% 7%;
+    }
+
+    footer .newsletter {
+    margin-top: 17%;
+    }
+
+    footer .contact .copywright {
+        padding: 1.5%;
+    }
+}
