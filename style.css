@@ -7,7 +7,6 @@
     --black: #000;
     --yellow:#DF991B;
     overflow-x: hidden;
-
 }
 
 *{
@@ -81,9 +80,6 @@ h3{
 }
 
 .card{
-    /* width: auto;
-    height: 340px;
-    margin: 0 3%; */
     height: 260px;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -248,10 +244,13 @@ body main .banner .title .rounded-button p{
 }
 
 /**/
+
+body .follow{
+    display: none;
+}
+/**/
 body .sale{
-    width: 100%;
-/*     height: 100%;
- */    
+    width: 100%;    
     padding: 5% 0;
     display: flex;
     flex-direction: column-reverse;
@@ -355,9 +354,7 @@ body .sale .description .description-arrows .arrows{
     display: none;
 }
 
-body .sale .description .description-arrows  .rounded-button{
-/*     padding: 3% 7%;
- */     
+body .sale .description .description-arrows  .rounded-button{   
     width: 100%;
     margin: 5% 0;
     border: none;
@@ -384,14 +381,15 @@ body .rent{
 }
 body .rent .cards{  
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns:  1fr 0.5fr;
     grid-template-rows: 1fr;
     gap: 5px;
+    overflow: hidden;
 }
 
 body .rent .cards .card{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; 
 }
 
 body .rent .cards .card.card1{
@@ -490,100 +488,6 @@ body .rent .description .description-arrows  .rounded-button img{
     width: 8%;
 }
 
-
-/**/
-/* body .rent{
-    display: flex;
-    width: 100%;
-    padding: 5% 0;
-}
-body .rent .cards{
-    width: 50%;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns:  1fr 1fr 0.5fr;
-}
-
-body .rent .cards .card .card-info{
-    width: 100%; 
-    height: 25%;
-    display: flex;
-    padding: 5%;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    color: var(--white);
-}
-
-body .rent .cards .card .card-info:hover{
-    background-color: var(--white);
-    transition: 1s;
-}
-
-body .rent .cards .card .card-info .country{
-    color: var(--gray-dark);
-    font-family: PF Regal Display Pro;
-    font-size: 20px;
-
-}
-
-body .rent .cards .card .card-info .city{
-    color: var(--black);
-    font-family: PF Regal Display Pro;
-    font-size: 30px;
-}
-
-
-body .rent .description{
-    width: 50%;
-    padding: 0 5% 0 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-body .rent .description .description-context{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-}
-body .rent .description .description-arrows{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-between;
-}
-body .rent .description .description-arrows:hover{
-    color: var(--yellow);
-}
-
-body .rent .description .description-arrows .arrows{    
-    border: none;
-    background: none;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-}
-
-body .rent .description .description-arrows .arrows img{
-    padding: 0 15%;
-    width: 55%;
-}
-
-body .rent .description .description-arrows .arrows p{
-    font-size: 15px;
-    font-weight: 300;
-}
-body .rent .description .description-arrows .arrows p:hover{
-    color: var(--yellow);
-}
-
-body .rent .description .description-arrows  .rounded-button{
-    padding: 3% 7%;
-    font-size: 20px;
-} */
-
 /**/
 body .development{
     display: flex;
@@ -594,9 +498,6 @@ body .development{
 body .development .title{
     padding: 5% ;
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 body .development .gallery{
@@ -606,16 +507,16 @@ body .development .gallery{
     overflow: hidden;
     gap: 5px;
 }
-/* .card:nth-child(n+4) {
-    display: none !important; /* Oculta tarjetas a partir de la 4ta 
-} */
 
 body .development .gallery .card{
     width: 100%;
-    display: flex;
-    align-items: flex-end;
+    display: none;
 }
 
+body .development .gallery .card:nth-child(-n+3) {
+    display: flex;
+    align-items: flex-end; 
+}
 
 body .development .gallery .card .card-info{
     color: var(--white);
@@ -814,8 +715,8 @@ footer .newsletter .back .front .form .rounded-button{
 }
 
 footer .contact{
-    height: auto;
     padding: 0 5%;
+    height: auto;
     background-color: var(--black);
     color: var(--white);
     font-weight: 300;
@@ -852,14 +753,6 @@ footer .contact .social-media{
 padding: 8% 0 5% 0;
 }
 
-footer .contact .social-media{
-    /* position: fixed;
-    top: 0;
-    left: 0; */
-    /* display: flex;
-    flex-direction: column; */
-}
-
 footer .contact .social-media p{
     display: none;
 }
@@ -876,8 +769,6 @@ footer .contact .copywright{
 }
   
 @media (min-width: 768px) /* and (max-width: 1024px) */ {
-
-    
 
     body main header{
         padding: 3% 5% 2% 5%;
@@ -918,6 +809,7 @@ footer .contact .copywright{
         height: 20px;  
         margin: 0 8%; 
     }
+
     body main header nav .options .register a,
     body main header nav .options .idioms a{
         color: var(--white);
@@ -964,6 +856,45 @@ footer .contact .copywright{
         width: 35%;
     }
 
+    body .follow{
+        padding: 2%;
+        display: flex;
+        width: 2%;
+        height: 50%;
+        background-color: red;
+        position: fixed;
+        top: 60%;
+        left: 0px;
+        z-index: 99999999999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    body .follow p{
+        transform: rotate(90deg);
+        color: var(--gray);
+        font-weight: 500;
+        margin-bottom: 25%;
+        font-size: 10px;
+    }
+
+    body .follow .line{
+        margin: 5% 0;
+        height: 30px;
+        border-left: solid 1px var(--gray);
+    }
+
+    body .follow a{
+        margin: 2%;  
+    }
+
+    body .sale, 
+    body .rent, 
+    body .blog {
+        padding: 2% 0%;
+    }
+
     body .sale,
     body .rent,
     body .blog{
@@ -984,6 +915,7 @@ footer .contact .copywright{
     body .blog .description{
         width: 50%;
         align-items: center;
+        
     }
 
     body .sale .cards{
@@ -996,6 +928,7 @@ footer .contact .copywright{
         gap: 8px;
     }
 
+
     body .sale .description,
     body .rent .description,
     body .blog .description{
@@ -1006,7 +939,8 @@ footer .contact .copywright{
     body .rent .description .description-context,
     body .blog .description .description-context{
     width: 100%;
-}
+    }
+
     body .sale .description .description-arrows,
     body .rent .description .description-arrows,
     body .blog .description .description-arrows{
@@ -1079,11 +1013,18 @@ footer .contact .copywright{
     body .development{
         padding-bottom: 8%;
     }
+
     body .development .gallery{
         grid-template-columns:  repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 15px;
     }
+
+    body .development .gallery .card {
+        display: flex;
+        align-items: flex-end;
+    }
+
     footer .newsletter {
         margin-top: 25%;
     }
@@ -1094,10 +1035,13 @@ footer .contact .copywright{
         top: -150px;
     }
 
+    footer .newsletter .back .front .title{
+        width: 50%;
+    }
+
     footer .newsletter .back .front .title h2 {
         width: 100%;
     }
- 
     
     footer .newsletter .back .front .form{
         width: 50%;
@@ -1125,6 +1069,7 @@ footer .contact .copywright{
         font-weight: 300;
         transition: 1s;
     }
+
     footer .newsletter .back .front .form input:focus{
         color: var(--white);
     }
@@ -1178,10 +1123,91 @@ footer .contact .copywright{
     footer .contact .info .column4 :nth-child(3){
         grid-area: row4;
     }
+    
+    hr{
+        margin-top: 10%;
+    }
+
+    footer .contact .social-media {
+        display: none;
+    }
+    footer .contact .copywright {
+        padding: 2%;
+    }
+    
 }
 
 
-    @media (min-width: 1025px) {
-    
-    
+@media (min-width: 1024px){
+
+    body main header {
+        padding: 1% 0% 0.5% 7%;
     }
+
+    body main header nav .logo {
+        width: 20%;
+    }
+
+    body main header nav .options .register{
+        width: 21%;
+    }
+    body main header nav .options .idioms{
+        width: 20%;
+        justify-content: space-evenly;
+    }
+
+    body main .banner .search input {
+        width: 35%;
+        padding: 1.5%;
+    }
+
+    body main header nav .options .line{
+        margin-right: 0;
+    }
+        
+    body main header nav .options .toggle{
+        width: 9%;
+    }
+        
+    body main header nav .options .toggle img{
+        width: 40%;
+    }
+
+    body main .banner{
+        padding: 0% 7% 8% 7%;
+    }
+
+    body main .banner .title .rounded-button {
+        width: 30%;
+    }
+    body .follow{
+        padding: 2%;
+        display: flex;
+        width: 5%;
+    }
+
+    body .sale .description, 
+    body .blog .description {
+        padding: 2% 7% 2% 5%;
+    }
+
+    body .rent .description {
+        padding: 2% 5% 2% 7%;
+    }
+
+    body .blog .description {
+        justify-content: space-evenly;
+        padding-bottom: 0;
+    }
+    footer .newsletter {
+    margin-top: 20%;
+    }
+    footer .newsletter .back .front {
+        
+        top: -180px;
+    }
+
+    footer .contact .copywright {
+        padding: 1.5%;
+    }
+}
