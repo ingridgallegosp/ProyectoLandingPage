@@ -502,6 +502,7 @@ body .development .title{
 
 body .development .gallery{
     display: grid;
+    margin: 0 5%;
     grid-template-columns:  1fr;
     grid-template-rows: repeat(3, auto);
     overflow: hidden;
@@ -520,10 +521,23 @@ body .development .gallery .card:nth-child(-n+3) {
 
 body .development .gallery .card .card-info{
     color: var(--white);
-}
-body .development .gallery .card .card-info:hover{
+    height: 30%;
+    padding: 5%;
     width: 100%;
     background-color: var(--white);
+
+}
+
+body .development .gallery .card .card-info .country{
+    font-size: 18px ;
+    color: var(--gray-dark);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body .development .gallery .card .card-info .city{
+    font-size: 28px ;
+    color: var(--black);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body .development .gallery .card.card-1{
@@ -857,13 +871,12 @@ footer .contact .copywright{
     }
 
     body .follow{
-        padding: 2%;
+        padding: 0%;
         display: flex;
-        width: 2%;
-        height: 50%;
-        background-color: red;
+        width: 4%;
+        min-height: 35%;
         position: fixed;
-        top: 60%;
+        top: 45%;
         left: 0px;
         z-index: 99999999999;
         flex-direction: column;
@@ -874,20 +887,26 @@ footer .contact .copywright{
     body .follow p{
         transform: rotate(90deg);
         color: var(--gray);
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 25%;
-        font-size: 10px;
+        font-size: 12px;
+        margin: 20%;
     }
 
     body .follow .line{
-        margin: 5% 0;
+        margin: 5% ;
         height: 30px;
         border-left: solid 1px var(--gray);
     }
 
     body .follow a{
-        margin: 2%;  
+        margin: 1%;  
+    } 
+
+    body .follow a img{
+        width: 80%;
     }
+
 
     body .sale, 
     body .rent, 
@@ -1015,6 +1034,7 @@ footer .contact .copywright{
     }
 
     body .development .gallery{
+        margin: 0 5%;
         grid-template-columns:  repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 15px;
@@ -1124,7 +1144,7 @@ footer .contact .copywright{
         grid-area: row4;
     }
     
-    hr{
+    .bottom-line{
         margin-top: 10%;
     }
 
@@ -1184,6 +1204,11 @@ footer .contact .copywright{
         padding: 2%;
         display: flex;
         width: 5%;
+        min-height: 40%;
+    }
+
+    body .follow a img{
+        width: 100%;
     }
 
     body .sale .description, 
@@ -1199,11 +1224,16 @@ footer .contact .copywright{
         justify-content: space-evenly;
         padding-bottom: 0;
     }
+
+    body .development .gallery{
+        margin: 0 7%;
+    }
+
     footer .newsletter {
     margin-top: 20%;
     }
+
     footer .newsletter .back .front {
-        
         top: -180px;
     }
 
